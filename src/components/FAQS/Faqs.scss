@@ -1,0 +1,13 @@
+.faq-section{
+  margin-right: $container-margin;
+  border-radius: 0 100px 0 0;
+  box-shadow: -4px 8px 20px 4px #0000001A;
+  padding: 50px 100px 50px 100px;
+  h2[data-testid="flowbite-accordion-heading"]{
+    height: 15px;
+  }
+  .faq-answers p{
+    font-weight: $font-weight-bold;
+    color: black;
+  }
+}

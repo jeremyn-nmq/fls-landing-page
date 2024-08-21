@@ -1,0 +1,26 @@
+.main-header{
+  box-shadow: -4px 8px 20px 4px #0000001A;
+
+  .burger-menu-icon{
+    height: 16px;
+    width: fit-content;
+    justify-content: space-between;
+    .menu-line-1, .menu-line-2, .menu-line-3{
+      height: 1px;
+      width: 20px;
+      background: black;
+      transition: all ease .3s;
+    }
+    &.is-opened{
+      .menu-line-1{
+        transform: translateY(8px) rotate(45deg);
+      }
+      .menu-line-3{
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      .menu-line-2{
+        width: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.main-banner{
+    height: 984px;
+    width: 100%;
+    background: white;
+    &-ground{
+        width: 100%;
+        height: 178.9px;
+        bottom: 0;
+        background: #2369B1;
+    }
+
+    .main-banner-headers{
+        top: 7%;
+        left: 54%;
+        transform: translateX(-50%);
+        z-index: 13;
+        //width: calc(100vw*0.14);
+    }
+
+    h1,h2{
+        font-family: Conthrax, sans-serif;
+        font-size: 70px;
+        @media (max-width: 768px) {
+            font-size: 40px;
+        }
+    }
+
+    h1{
+        opacity: 0;
+        color: #2369B1;
+        font-size: 120px;
+        animation: slide-in-bottom 1.5s ease 2s 1 normal forwards;
+        @media screen and (max-width: 768px) {
+            font-size: 50px;
+        }
+    }
+
+    h2{
+        opacity: 0;
+        animation: slide-in-left 1.5s ease 1.7s 1 normal forwards;
+        color: #45A56C;
+    }
+
+    #originalTruck{
+        animation: banner-truck-enter 1.5s ease 0s 1 normal forwards;
+    }
+}

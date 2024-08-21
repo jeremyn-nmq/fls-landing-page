@@ -1,0 +1,34 @@
+footer{
+  h3{
+    font-family: Conthrax, sans-serif;
+    color: $primary;
+    font-size: $heading-size;
+  }
+
+  h4{
+    font-family: Gotham, sans-serif;
+    color: $text-secondary;
+    font-weight: $font-weight-normal;
+    letter-spacing: 0.05px;
+    font-size: $paragraph-size;
+  }
+
+  p{
+    font-family: Gotham, sans-serif;
+    font-weight: $font-weight-light;
+    font-size: 1rem;
+    opacity: 30%;
+  }
+
+  .google-map {
+    width: 100%;
+    max-width: 484px;
+    iframe{
+      min-width: 300px;
+      width: 100%;
+      @media (min-width: 786px){
+        min-width: 484px;
+      }
+    }
+  }
+}

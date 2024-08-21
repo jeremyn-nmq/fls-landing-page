@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "variables";
+@import "fonts";
+@import "animation";
+
+@import "../components/Header/Header";
+@import "../components/Footer/Footer";
+@import "../components/FAQS/Faqs";
+@import "../components/TransportRoutes/TransportRoutes";
+@import "../components/Services/Services";
+@import "../components/Safety/Safety";
+@import "../components/WhyUs/WhyUs";
+
+h2.heading-section{
+  font-family: Conthrax;
+  color: $text-primary;
+  font-size: $heading-size;
+}
+
+p, h2[data-testid="flowbite-accordion-heading"]{
+  font-family: Gotham;
+  font-size: $paragraph-size;
+  font-weight: $font-weight-light;
+}
+
+html{
+  scroll-behavior: smooth;
+}
