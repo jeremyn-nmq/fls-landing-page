@@ -3,15 +3,16 @@ import flag1 from "../../images/flag1.png";
 import flag2 from "../../images/flag2.png";
 import flag3 from "../../images/flag3.png";
 import flag4 from "../../images/flag4.png";
+import { useTranslation } from 'gatsby-plugin-react-i18next';
+
 
 const TransportRoutes = () => {
+    const {t} = useTranslation();
     return (
         <div className={"container mx-auto flex flex-col gap-5"} id={"routes"}>
             <h2 className={"heading-section text-center"}>ROUTES</h2>
             <p className={"text-center opacity-60"}>
-                Leveraging Vietnam's strategic hub, We reach locations efficientl. <br/>
-                As part of FLS Group, a leader in Reefer Logistics, we offer swift and flexible <br/>
-                cold chain solutions to ensure freshness across the region.
+                {t("routes_description")}
             </p>
             <div className={"flex columns-4 md:justify-between justify-center flex-wrap"}>
                 <div className={"flex flex-col gap-5"}>

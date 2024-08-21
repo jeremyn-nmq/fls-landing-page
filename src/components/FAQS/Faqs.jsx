@@ -1,9 +1,10 @@
 import * as React from "react";
 import {FAQ} from '../../utils/data'
 import {Accordion, Flowbite} from "flowbite-react";
-
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 const Faqs = () => {
+    const {t} = useTranslation();
     const customTheme = {
         accordion:{
             "root": {
@@ -46,10 +47,10 @@ const Faqs = () => {
                         <Flowbite theme={{ theme: customTheme }}>
                             <Accordion collapseAll key={index}>
                                 <Accordion.Panel>
-                                    <Accordion.Title>{item.question}</Accordion.Title>
+                                    <Accordion.Title>{t(item.question)}</Accordion.Title>
                                     <Accordion.Content>
                                         <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                            {item.answer}
+                                            {t(item.answer)}
                                         </p>
                                     </Accordion.Content>
                                 </Accordion.Panel>

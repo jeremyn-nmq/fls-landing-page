@@ -8,24 +8,24 @@ const Header = ({ siteTitle }) => {
     const [isOpened, setIsOpened] = useState(false);
     const navBarItems = [
         {
-            name: "ROUTES",
+            translationKey: "header_routes",
             url: "#routes"
         },
         {
-            name: "SERVICES",
+            translationKey: "header_services",
             url: "#services"
         },
         {
-            name: "WHY US",
+            translationKey: "header_whyus",
             url: "#why-us"
         },
         {
-            name: "FAQs",
+            translationKey: "header_faqs",
             url: "#faqs"
         },
     ]
     return (
-        <header className="main-header h-[130px] w-full bg-white text-white flex justify-between">
+        <header className="main-header h-[130px] w-full bg-white text-white flex justify-between sticky top-0 z-50">
             <div className={"flex items-center justify-between container mx-auto relative"}>
                 <div className={"flex items-start gap-4"}>
                     <div className={`burger-menu-icon flex flex-col hover:cursor-pointer ${isOpened ? "is-opened": ""}`} onClick={()=> setIsOpened(!isOpened)}>
@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => {
                         {navBarItems.map((item) => (
                             <li key={item.name}>
                                 <Link to={item.url} className={"text-black uppercase font-[Gotham] hover:cursor-pointer flex items-center"}>
-                                    {item.name}
+                                    {t(item.translationKey)}
                                 </Link>
                             </li>
                         ))}
