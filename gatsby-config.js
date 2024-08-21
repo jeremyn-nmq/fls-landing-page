@@ -1,3 +1,8 @@
+require('dotenv').config()
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
 const { languages, defaultLanguage } = require('./languages');
 
 /**
@@ -155,8 +160,7 @@ module.exports = {
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
-            process.env.WPGRAPHQL_URL ||
-            `https://fls.saigondigitaldev.com/graphql`,
+            process.env.WPGRAPHQL_URL,
       },
     },
   ],
