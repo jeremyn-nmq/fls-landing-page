@@ -1,29 +1,29 @@
 @font-face {
   font-family: Gotham;
-  src: url(../fonts/Gotham/GothamMedium.ttf);
+  src: url(src/fonts/Gotham/GothamMedium.ttf);
   font-weight: $font-weight-normal;
 }
 
 @font-face {
   font-family: Gotham;
-  src: url(../fonts/Gotham/gotham-bold.woff);
+  src: url(src/fonts/Gotham/gotham-bold.woff);
   font-weight: $font-weight-bold;
 }
 
 @font-face {
   font-family: Gotham;
-  src: url(../fonts/Gotham/gothamLight.ttf);
+  src: url(src/fonts/Gotham/gothamLight.ttf);
   font-weight: $font-weight-light;
 }
 
 @font-face {
   font-family: Conthrax;
-  src: url(../fonts/Conthrax/conthrax_bold-webfont.woff) format("woff"), url(../fonts/Conthrax/conthrax_bold-webfont.woff2) format("woff2");
+  src: url(src/fonts/Conthrax/conthrax_bold-webfont.woff) format("woff"), url(src/fonts/Conthrax/conthrax_bold-webfont.woff2) format("woff2");
   font-weight: $font-weight-bold;
 }
 
 @font-face {
   font-family: Conthrax;
-  src: url(../fonts/Conthrax/conthrax_heavy-webfont.woff) format("woff"), url(../fonts/Conthrax/conthrax_heavy-webfont.woff2) format("woff2");
+  src: url(src/fonts/Conthrax/conthrax_heavy-webfont.woff) format("woff"), url(src/fonts/Conthrax/conthrax_heavy-webfont.woff2) format("woff2");
   font-weight: $font-weight-black;
 }
