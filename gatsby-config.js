@@ -147,21 +147,21 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      /**
-       * First up is the WordPress source plugin that connects Gatsby
-       * to your WordPress site.
-       *
-       * visit the plugin docs to learn more
-       * https://github.com/gatsbyjs/gatsby-source-wordpress-experimental/blob/master/README.md
-       *
-       */
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        // the only required plugin option for WordPress is the GraphQL url.
-        url:
-            process.env.WPGRAPHQL_URL,
-      },
-    },
+    // {
+    //   /**
+    //    * First up is the WordPress source plugin that connects Gatsby
+    //    * to your WordPress site.
+    //    *
+    //    * visit the plugin docs to learn more
+    //    * https://github.com/gatsbyjs/gatsby-source-wordpress-experimental/blob/master/README.md
+    //    *
+    //    */
+    //   resolve: `gatsby-source-wordpress`,
+    //   options: {
+    //     // the only required plugin option for WordPress is the GraphQL url.
+    //     url:
+    //         process.env.WPGRAPHQL_URL,
+    //   },
+    // },
   ],
 }

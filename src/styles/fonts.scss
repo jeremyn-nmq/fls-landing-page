@@ -1,29 +1,77 @@
 @font-face {
   font-family: Gotham;
-  src: url(src/fonts/Gotham/GothamMedium.ttf);
+  src: url("../fonts/Gotham/GothamBlack.otf");
+  font-weight: $font-weight-black;
+}
+
+@font-face {
+  font-family: Gotham;
+  src: url("../fonts/Gotham/GothamBlackItalic.otf");
+  font-weight: $font-weight-black;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Gotham;
+  src: url("../fonts/Gotham/GothamBold.otf");
+  font-weight: $font-weight-bold;
+}
+
+@font-face {
+  font-family: Gotham;
+  src: url("../fonts/Gotham/GothamBoldItalic.otf");
+  font-weight: $font-weight-bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Gotham;
+  src: url("../fonts/Gotham/GothamMedium.otf");
   font-weight: $font-weight-normal;
 }
 
 @font-face {
   font-family: Gotham;
-  src: url(src/fonts/Gotham/gotham-bold.woff);
-  font-weight: $font-weight-bold;
+  src: url("../fonts/Gotham/GothamMediumItalic.otf");
+  font-weight: $font-weight-normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: Gotham;
-  src: url(src/fonts/Gotham/gothamLight.ttf);
+  src: url("../fonts/Gotham/GothamLight.otf");
   font-weight: $font-weight-light;
 }
 
 @font-face {
+  font-family: Gotham;
+  src: url("../fonts/Gotham/GothamLightItalic.otf");
+  font-weight: $font-weight-light;
+  font-style: italic;
+}
+
+@font-face {
   font-family: Conthrax;
-  src: url(src/fonts/Conthrax/conthrax_bold-webfont.woff) format("woff"), url(src/fonts/Conthrax/conthrax_bold-webfont.woff2) format("woff2");
+  src: url("../fonts/Conthrax/ConthraxBold.otf");
   font-weight: $font-weight-bold;
 }
 
 @font-face {
   font-family: Conthrax;
-  src: url(src/fonts/Conthrax/conthrax_heavy-webfont.woff) format("woff"), url(src/fonts/Conthrax/conthrax_heavy-webfont.woff2) format("woff2");
+  src: url("../fonts/Conthrax/ConthraxBoldItalic.otf");
+  font-weight: $font-weight-bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Conthrax;
+  src: url("../fonts/Conthrax/ConthraxHeavy.otf");
   font-weight: $font-weight-black;
+}
+
+@font-face {
+  font-family: Conthrax;
+  src: url("../fonts/Conthrax/ConthraxHeavyItalic.otf");
+  font-weight: $font-weight-black;
+  font-style: italic;
 }

@@ -10,6 +10,7 @@
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.0.17",
     "@fontsource/merriweather": "^5.0.8",
+    "css-loader": "^7.1.2",
     "dotenv": "^16.4.5",
     "flowbite-react": "^0.10.1",
     "gatsby": "^5.13.5",
