@@ -1,14 +1,21 @@
 .brand-slogan{
   padding: 50px 0;
   background: url("../images/quotes.png") no-repeat center;
+  h2{
+    @media screen and (max-width: 786px) {
+      padding: 0 20px;
+    }
+  }
 }
 
 .safety-section{
-  padding: 50px 100px 50px 100px;
+  padding: 50px 20px;
   border-radius: 100px 0 0 0;
   box-shadow: -4px 8px 20px 4px #0000001A;
   border: 1px solid #EBEBEB;
   @media screen and (min-width: 786px) {
     margin-left: 100px;
+    padding: 50px 100px;
+    border-radius: 40px 0 0 0;
   }
 }

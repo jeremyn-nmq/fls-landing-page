@@ -18,6 +18,9 @@ h2.heading-section{
   font-family: Conthrax;
   color: $text-primary;
   font-size: $heading-size;
+  @media screen and (max-width: 786px) {
+    font-size: $heading-size-mobile;
+  }
 }
 
 p, h2[data-testid="flowbite-accordion-heading"]{

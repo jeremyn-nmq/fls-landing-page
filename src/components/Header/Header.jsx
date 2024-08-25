@@ -25,9 +25,9 @@ const Header = ({ siteTitle }) => {
         },
     ]
     return (
-        <header className="main-header h-[130px] w-full bg-white text-white flex justify-between sticky top-0 z-50">
-            <div className={"flex items-center justify-between container mx-auto relative"}>
-                <div className={"flex items-start gap-4"}>
+        <header className="main-header h-[130px] w-full bg-white text-white flex justify-between sticky top-0 z-50 md:px-0 px-4">
+            <div className={"flex items-center justify-between container mx-auto relative md:gap-0 gap-5"}>
+                <div className={"flex items-center gap-4"}>
                     <div className={`burger-menu-icon flex flex-col hover:cursor-pointer ${isOpened ? "is-opened": ""}`} onClick={()=> setIsOpened(!isOpened)}>
                         <div className={'menu-line-1'}/>
                         <div className={'menu-line-2'}/>
@@ -55,7 +55,9 @@ const Header = ({ siteTitle }) => {
                             </li>
                         ))}
                     </ul>
-                    <img src={FLSlink} alt={""} className={"w-100 object-contain hover:cursor-pointer"}/>
+                    <a href={"https://fls-group.com/"}>
+                        <img src={FLSlink} alt={""} className={"h-full object-contain hover:cursor-pointer"}/>
+                    </a>
                 </div>
             </div>
         </header>

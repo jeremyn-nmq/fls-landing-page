@@ -14,7 +14,7 @@ const TransportRoutes = () => {
             <p className={"text-center opacity-60"}>
                 {t("routes_description")}
             </p>
-            <div className={"flex columns-4 md:justify-between justify-center flex-wrap"}>
+            <div className={"flex columns-4 md:justify-between justify-center flex-wrap md:gap-0 gap-5"}>
                 <div className={"flex flex-col gap-5"}>
                     <img src={flag1} alt={""}/>
                     <p className={"text-center route-name"}>Viet Nam</p>

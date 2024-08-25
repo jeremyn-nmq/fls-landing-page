@@ -8,6 +8,7 @@ import Safety from "./Safety/Safety";
 import WhyUs from "./WhyUs/WhyUs";
 import Header from "./Header/Header";
 import Banner from "./Banner/Banner";
+import BackToTopButton from "./BackToTop/BackToTopButton";
 
 const Layout = () => {
     return (
@@ -22,6 +23,7 @@ const Layout = () => {
                 <Faqs/>
             </main>
             <Footer/>
+            <BackToTopButton/>
         </div>
     )
 }

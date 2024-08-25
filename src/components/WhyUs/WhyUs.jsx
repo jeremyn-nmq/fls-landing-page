@@ -1,5 +1,5 @@
 import * as React from "react"
-import flag1 from "../../images/flag1.png";
+import flag1 from "../../images/service1.png";
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 const WhyUs = () => {
