@@ -19,31 +19,31 @@ const mockImages = {
 const Banner = () => {
     const [showSlicedTruck, setShowSlicedTruck] = useState(false);
     const [truckMoved, setTruckMoved] = useState(false);
-    const [activeImages, setActiveImages] = useState(mockImages.area1); // Default images
+    const [activeImages, setActiveImages] = useState(mockImages.area1);
     const [sidebarVisible, setSidebarVisible] = useState(false);
 
     const handleAreaClick = (e) => {
         e.preventDefault();
         const areaId = e.currentTarget.id;
         setTruckMoved(true);
-        setActiveImages(mockImages[areaId]); // Set images based on the clicked area
+        setActiveImages(mockImages[areaId]);
         setTimeout(() => {
             setShowSlicedTruck(true);
-            setSidebarVisible(true); // Show sidebar
+            setSidebarVisible(true);
         }, 100);
     };
 
     const handleMouseLeave = (e) => {
         e.preventDefault();
         setShowSlicedTruck(false);
-        setSidebarVisible(false); // Hide sidebar
+        setSidebarVisible(false);
         setTimeout(() => {
             setTruckMoved(false);
         }, 100);
     };
 
     const handleHoverArea = (areaId) => {
-        setActiveImages(mockImages[areaId]); // Update images based on hovered area
+        setActiveImages(mockImages[areaId]);
     };
 
     return (
