@@ -1,6 +1,6 @@
 import * as React from "react"
 import {useTranslation} from "gatsby-plugin-react-i18next";
-import backToTop from "../../images/backToTop.png";
+import backToTop from "../../images/backToTop.svg";
 
 const BackToTopButton = () => {
     const {t} = useTranslation();
