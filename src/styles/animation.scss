@@ -13,7 +13,7 @@
 @keyframes slide-in-left {
     0% {
         opacity: 0;
-        transform: translateX(-250px);
+        transform: translateX(-100%);
     }
 
     100% {
@@ -22,15 +22,33 @@
     }
 }
 
-@keyframes slide-in-bottom {
+@keyframes slide-in-right {
     0% {
-        opacity: 0;
-        transform: translateY(250px);
+        transform: translateX(100%);
     }
-
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
+
+@keyframes spin {
+    from {
+        transform:rotate(360deg);
+    }
+    to {
+        transform:rotate(0deg);
+    }
+}
+
+//@keyframes slide-in-bottom {
+//    0% {
+//        opacity: 0;
+//        transform: translateY(250px);
+//    }
+//
+//    100% {
+//        opacity: 1;
+//        transform: translateY(0);
+//    }
+//}
 

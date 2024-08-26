@@ -1,21 +1,95 @@
-import React from 'react';
+import React, { useState } from 'react';
 import originalTruck from '../../images/original-truck.png';
 import slicedTruck from '../../images/sliced-truck.png';
-import "./Banner.scss"
+import flag1 from '../../images/flag1.png';
+import flag2 from '../../images/flag2.png';
+import flag3 from '../../images/flag3.png';
+import flag4 from '../../images/flag4.png';
+import './Banner.scss';
+import Sidebar from "./components/Sidebar";
+
+// Mock image data
+const mockImages = {
+    area1: [flag1, flag1, flag1],
+    area2: [flag2, flag2, flag2],
+    area3: [flag3, flag3, flag3],
+    area4: [flag4, flag4, flag4],
+};
 
 const Banner = () => {
+    const [showSlicedTruck, setShowSlicedTruck] = useState(false);
+    const [truckMoved, setTruckMoved] = useState(false);
+    const [activeImages, setActiveImages] = useState(mockImages.area1); // Default images
+    const [sidebarVisible, setSidebarVisible] = useState(false);
+
+    const handleAreaClick = (e) => {
+        e.preventDefault();
+        const areaId = e.currentTarget.id;
+        setTruckMoved(true);
+        setActiveImages(mockImages[areaId]); // Set images based on the clicked area
+        setTimeout(() => {
+            setShowSlicedTruck(true);
+            setSidebarVisible(true); // Show sidebar
+        }, 100);
+    };
+
+    const handleMouseLeave = (e) => {
+        e.preventDefault();
+        setShowSlicedTruck(false);
+        setSidebarVisible(false); // Hide sidebar
+        setTimeout(() => {
+            setTruckMoved(false);
+        }, 100);
+    };
+
+    const handleHoverArea = (areaId) => {
+        setActiveImages(mockImages[areaId]); // Update images based on hovered area
+    };
+
     return (
-        <div className="main-banner flex justify-center items-center position relative" id={"top-banner"}>
+        <div className="main-banner flex justify-center items-center relative" id="top-banner">
             <div className="main-banner-ground absolute"></div>
-            <div className="main-banner-headers absolute">
-                <h2 className="uppercase">Your <br/> "Freezy" Goods</h2>
-                <h1 className="uppercase">Guardian</h1>
+            <div className={`truck-container relative ${truckMoved ? 'move-left' : 'move-right'}`}>
+                <div className={!showSlicedTruck ? "opacity-100 w-100" : "opacity-0 w-0"}>
+                    <img
+                        className="z-10 object-contain"
+                        src={originalTruck}
+                        alt="original-truck"
+                        id="originalTruck"
+                    />
+                    <div className="truck-overlay">
+                        <div className="truck-area area-1">
+                            <div id="area1" className="truck-click-area" onClick={handleAreaClick}></div>
+                        </div>
+                        <div className="truck-area area-2">
+                            <div id="area2" className="truck-click-area" onClick={handleAreaClick}></div>
+                        </div>
+                        <div className="truck-area area-3">
+                            <div id="area3" className="truck-click-area" onClick={handleAreaClick}></div>
+                        </div>
+                        <div className="truck-area area-4">
+                            <div id="area4" className="truck-click-area" onClick={handleAreaClick}></div>
+                        </div>
+                    </div>
+                </div>
+                <div className={showSlicedTruck ? "opacity-100 w-100" : "opacity-0 w-0"}>
+                    <img
+                        className="z-10 object-contain slicedTruck"
+                        src={slicedTruck}
+                        alt="sliced-truck"
+                        id="slicedTruck"
+                    />
+                    <div className="truck-overlay" onMouseLeave={handleMouseLeave}>
+                        <div className="truck-area hover-area area-1" onMouseEnter={() => handleHoverArea('area1')}></div>
+                        <div className="truck-area hover-area area-2" onMouseEnter={() => handleHoverArea('area2')}></div>
+                        <div className="truck-area hover-area area-3" onMouseEnter={() => handleHoverArea('area3')}></div>
+                        <div className="truck-area hover-area area-4" onMouseEnter={() => handleHoverArea('area4')}></div>
+                    </div>
+                </div>
             </div>
-            <img className="h-full z-10 object-contain" src={originalTruck} alt="original-truck" id="originalTruck"/>
-            {/*<img src={slicedTruck} alt="original-truck"></img>*/}
+            <Sidebar images={activeImages} isVisible={sidebarVisible} />
         </div>
-    )
-}
+    );
+};
 
 export default Banner;
- 
