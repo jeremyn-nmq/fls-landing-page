@@ -15,6 +15,7 @@
     "flowbite-react": "^0.10.1",
     "gatsby": "^5.13.5",
     "gatsby-plugin-feed": "^5.13.1",
+    "gatsby-plugin-google-tagmanager": "^5.13.1",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-react-i18next": "^3.0.1",
