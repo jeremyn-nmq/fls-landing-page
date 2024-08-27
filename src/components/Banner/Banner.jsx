@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import originalTruck from '../../images/original-truck.png';
+import originalTruckTranslated from '../../images/original-truck-translated.png';
 import slicedTruck from '../../images/sliced-truck.png';
+import slicedTruckTranslated from '../../images/sliced-truck-translated.png';
 import flag1 from '../../images/flag1.png';
 import flag2 from '../../images/flag2.png';
 import flag3 from '../../images/flag3.png';
 import flag4 from '../../images/flag4.png';
 import './Banner.scss';
 import Sidebar from "./components/Sidebar";
+import {useI18next} from "gatsby-plugin-react-i18next";
 
 // Mock image data
 const mockImages = {
@@ -21,6 +24,14 @@ const Banner = () => {
     const [truckMoved, setTruckMoved] = useState(false);
     const [activeImages, setActiveImages] = useState(mockImages.area1);
     const [sidebarVisible, setSidebarVisible] = useState(false);
+    const [originalTruckSrc, setOriginalTruckSrc] = useState(originalTruck);
+    const [slicedTruckSrc, setSlicedTruckSrc] = useState(originalTruck);
+    const { language} = useI18next();
+
+    useEffect(() => {
+        setOriginalTruckSrc(language === "en" ? originalTruck : originalTruckTranslated)
+        setSlicedTruckSrc(language === "en" ? slicedTruck : slicedTruckTranslated)
+    }, [language])
 
     const handleAreaClick = (e) => {
         e.preventDefault();
@@ -53,7 +64,7 @@ const Banner = () => {
                 <div className={!showSlicedTruck ? "opacity-100 w-100" : "opacity-0 w-0"}>
                     <img
                         className="z-10 object-contain"
-                        src={originalTruck}
+                        src={originalTruckSrc}
                         alt="original-truck"
                         id="originalTruck"
                     />
@@ -75,7 +86,7 @@ const Banner = () => {
                 <div className={showSlicedTruck ? "opacity-100 w-100" : "opacity-0 w-0"}>
                     <img
                         className="z-10 object-contain slicedTruck"
-                        src={slicedTruck}
+                        src={slicedTruckSrc}
                         alt="sliced-truck"
                         id="slicedTruck"
                     />
