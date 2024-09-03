@@ -34,8 +34,8 @@ const Header = ({ siteTitle }) => {
                         <div className={'menu-line-3'}/>
                     </div>
                     <ul className={`navbar flex gap-5 transition items-center md:flex-row flex-col md:static absolute ${isOpened ? "opacity-100 block top-[130px] z-10 w-full left-0 bg-white": "opacity-0 hidden"}`}>
-                        {navBarItems.map((item) => (
-                            <li key={item.name}>
+                        {navBarItems.map((item, index) => (
+                            <li key={index}>f
                                 <Link to={item.url} className={"text-black uppercase font-[Gotham] hover:cursor-pointer flex items-center"}>
                                     {t(item.translationKey)}
                                 </Link>

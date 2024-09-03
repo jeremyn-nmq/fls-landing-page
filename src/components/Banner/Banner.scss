@@ -5,12 +5,20 @@
     display: flex;
     align-items: end;
     justify-content: center;
+
+    @media screen and (max-width: 768px){
+        height: 50vh;
+    }
+
     &-ground {
         width: 100%;
         min-height: 178.9px;
         height: 20%;
         bottom: 0;
         background: #2369B1;
+        @media screen and (max-width: 768px){
+            min-height: 100px;
+        }
     }
 
     img#originalTruck, img#slicedTruck {
@@ -23,6 +31,12 @@
         height: 73%;
         margin-bottom: 15vh;
         transition: transform 1s ease, opacity 1s ease;
+
+        @media screen and (max-width: 768px){
+            min-width: 500px;
+            height: 100%;
+            margin-bottom: 3vh;
+        }
     }
 
     .truck-overlay {
@@ -30,10 +44,18 @@
         bottom: 14.5%;
         right: 0;
         width: 78%;
-        height: 48%;
+        height: 45%;
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
         grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+
+        @media screen and (max-width: 1200px){
+            height: 45%;
+        }
+
+        @media screen and (max-width: 768px){
+            bottom: 17.5%;
+        }
     }
 
     .truck-area {
@@ -51,10 +73,27 @@
     .truck-click-area {
         height: 20vh;
         width: 20vh;
+        max-width: 140px;
+        max-height: 140px;
         cursor: pointer;
         animation: spin 6s infinite linear;
         border-radius: 50%;
         background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%232267ADFF' stroke-width='5' stroke-dasharray='10%2c 5' stroke-dashoffset='86' stroke-linecap='butt'/%3e%3c/svg%3e");
+
+        @media screen and (max-width: 1200px){
+            max-width: 125px;
+            max-height: 125px;
+        }
+
+        @media screen and (max-width: 1024px){
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        @media screen and (max-width: 768px){
+            max-width: 80px;
+            max-height: 80px;
+        }
     }
 
     .area-1 {
@@ -127,6 +166,7 @@
         height: 100%;
         width: 100%;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        padding: 0 20px;
     }
 
     .slide-in-right {

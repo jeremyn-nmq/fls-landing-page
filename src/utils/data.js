@@ -1,3 +1,10 @@
+import flag1 from "../images/flag1.png";
+import flag2 from "../images/flag2.png";
+import flag3 from "../images/flag3.png";
+import flag4 from "../images/flag4.png";
+import phoneIcon from "../images/cta-phone.png";
+import zaloIcon from "../images/cta-zalo.png";
+
 export const FAQ = [
 	{
 		"question": "faq_question1",
@@ -27,5 +34,34 @@ export const FAQ = [
 	{
 		"question": "faq_question8",
 		"answer": "faq_answer8"
+	}
+]
+
+export const MOCK_BANNER_IMGS = {
+	area1: [flag1, flag1, flag1],
+	area2: [flag2, flag2, flag2],
+	area3: [flag3, flag3, flag3],
+	area4: [flag4, flag4, flag4],
+};
+
+export const CTA_ITEMS = [
+	{
+		logo: phoneIcon,
+		name: "phone",
+		order: 1,
+		info: {
+			href: "tel: +842854496084",
+			label: '+84 28 54 496 084'
+		}
+	},
+	{
+		logo: zaloIcon,
+		name: "zalo",
+		order: 2,
+		info: {
+			href: "https://zalo.me/0813822635",
+			label: '+84 28 54 496 084',
+			newPage: true,
+		}
 	}
 ]
