@@ -8,13 +8,13 @@ import Safety from "./Safety/Safety";
 import WhyUs from "./WhyUs/WhyUs";
 import Header from "./Header/Header";
 import Banner from "./Banner/Banner";
-import BackToTopButton from "./BackToTop/BackToTopButton";
+import CTA from "./CTA/CTA";
 
 const Layout = () => {
     return (
         <div className={"flex flex-col gap-[80px]"}>
             <Header/>
-            <main className={"flex flex-col gap-[80px]"}>
+            <main className={"flex flex-col gap-[80px] relative"}>
                 <Banner/>
                 <TransportRoutes/>
                 <Services/>
@@ -23,7 +23,7 @@ const Layout = () => {
                 <Faqs/>
             </main>
             <Footer/>
-            <BackToTopButton/>
+            <CTA/>
         </div>
     )
 }

@@ -44,6 +44,10 @@
         align-items: center;
     }
 
+    .hover-area{
+        cursor: pointer;
+    }
+
     .truck-click-area {
         height: 20vh;
         width: 20vh;
@@ -95,8 +99,7 @@
     right: 0;
     width: 20vw;
     height: 100vh;
-    background-color: #2267ad;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     display: flex;
