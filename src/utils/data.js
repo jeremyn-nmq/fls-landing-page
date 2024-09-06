@@ -65,3 +65,43 @@ export const CTA_ITEMS = [
 		}
 	}
 ]
+
+
+export const BANNER_ITEMS = [
+	{
+		"heading": "banner_heading1",
+		"subHeading":"banner_subheading1",
+		"content": [
+			flag1,
+			flag2,
+			flag3
+		]
+	},
+	{
+		"heading": "banner_heading2",
+		"subHeading":"banner_subheading2",
+		"content": [
+			flag1,
+			flag2,
+			flag3
+		]
+	},
+	{
+		"heading": "banner_heading3",
+		"subHeading":"banner_subheading3",
+		"content": [
+			flag1,
+			flag2,
+			flag3
+		]
+	},
+	{
+		"heading": "banner_heading4",
+		"subHeading":"banner_subheading4",
+		"content": [
+			flag1,
+			flag2,
+			flag3
+		]
+	}
+]

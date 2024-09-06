@@ -83,8 +83,6 @@ const Banner = () => {
             {
                 isMobileResolution ? (
                     <>
-
-                        <h2 data-modal-target="static-modal" data-modal-toggle="static-modal">Mobile</h2>
                         <Modal/>
                     </>
                 ) : (

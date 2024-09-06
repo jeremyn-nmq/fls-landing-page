@@ -1,29 +1,70 @@
 import React from "react";
+import originalTruck from '../../../images/original-truck.png';
+import {BANNER_ITEMS} from '../../../utils/data'
+import {Accordion, Flowbite} from "flowbite-react";
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 export default function Modal() {
     const [showModal, setShowModal] = React.useState(false);
+    const {t} = useTranslation();
+
+    const customTheme = {
+        accordion:{
+            "root": {
+                "base": "",
+                "flush": {
+                    "off": "",
+                    "on": ""
+                }
+            },
+            "content": {
+                "base": "bg-[#EBEBEB] py-[5px] px-[10px] banner-accordions",
+            },
+            "title": {
+                "arrow": {
+                    "base": "h-6 w-6 shrink-0 text-[#0068B0]",
+                    "open": {
+                        "off": "",
+                        "on": "rotate-180"
+                    }
+                },
+                "base": "flex w-full items-center justify-between py-[5px] px-[10px] text-left bg-[#EBEBEB] rounded-tr-[20px]",
+                "flush": {
+                    "off": "",
+                    "on": "bg-transparent dark:bg-transparent"
+                },
+                "heading": "",
+                "open": {
+                    "off": "",
+                    "on": ""
+                }
+            }
+        }
+    }
     return (
         <>
             <button
-                className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="bg-transparent w-full px-4"
                 type="button"
                 onClick={() => setShowModal(true)}
             >
-                Open regular modal
+                <img
+                    className="z-10 object-contain"
+                    src={originalTruck}
+                    alt="original-truck"
+                    id="originalTruck"
+                />
             </button>
             {showModal ? (
                 <>
                     <div
                         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                     >
-                        <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                        <div className="relative w-full my-6 mx-auto max-w-3xl">
                             {/*content*/}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                 {/*header*/}
                                 <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-                                    <h3 className="text-3xl font-semibold">
-                                        Modal Title
-                                    </h3>
                                     <button
                                         className="p-1 ml-auto bg-transparent border-0 text-black opacity-1 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                                         onClick={() => setShowModal(false)}
@@ -34,31 +75,33 @@ export default function Modal() {
                                     </button>
                                 </div>
                                 {/*body*/}
-                                <div className="relative p-6 flex-auto">
-                                    <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-                                        I always felt like I could do anything. That’s the main
-                                        thing people are controlled by! Thoughts- their perception
-                                        of themselves! They're slowed down by their perception of
-                                        themselves. If you're taught you can’t do anything, you
-                                        won’t do anything. I was taught I could do everything.
-                                    </p>
-                                </div>
-                                {/*footer*/}
-                                <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-                                    <button
-                                        className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                        type="button"
-                                        onClick={() => setShowModal(false)}
-                                    >
-                                        Close
-                                    </button>
-                                    <button
-                                        className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                        type="button"
-                                        onClick={() => setShowModal(false)}
-                                    >
-                                        Save Changes
-                                    </button>
+                                <div className="relative p-6 flex-auto max-h-[80vh] overflow-auto">
+                                    <div className={"flex flex-col gap-3 flex-wrap"}>
+                                        {BANNER_ITEMS.map((item, index) => {
+                                            return (
+                                                <Flowbite theme={{ theme: customTheme }} key={index}>
+                                                    <Accordion collapseAll>
+                                                        <Accordion.Panel>
+                                                            <Accordion.Title>
+                                                                <h2 className={"font-bold"}>
+                                                                    {t(item.heading)}
+                                                                </h2>
+                                                                <p className={"text-sm"}>
+                                                                    {t(item.subHeading)}
+                                                                </p>
+                                                            </Accordion.Title>
+                                                            <Accordion.Content>
+                                                                {item.content.map((content) =>
+                                                                    (<img src={content} alt={""} className={"max-w-24"}/>)
+                                                                )}
+
+                                                            </Accordion.Content>
+                                                        </Accordion.Panel>
+                                                    </Accordion>
+                                                </Flowbite>
+                                            )}
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
