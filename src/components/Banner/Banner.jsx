@@ -1,5 +1,4 @@
 import React, {useState, useEffect, useRef} from 'react';
-import ReactImageMagnify from 'react-image-magnify';
 import originalTruck from '../../images/original-truck.png';
 import originalTruckTranslated from '../../images/original-truck-translated.png';
 import slicedTruck from '../../images/sliced-truck.png';
