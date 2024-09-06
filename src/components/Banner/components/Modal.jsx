@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import originalTruck from '../../../images/original-truck.png';
 import {BANNER_ITEMS} from '../../../utils/data'
 import {Accordion, Flowbite} from "flowbite-react";
@@ -18,7 +18,7 @@ export default function Modal() {
                 }
             },
             "content": {
-                "base": "bg-[#EBEBEB] py-[5px] px-[10px] banner-accordions",
+                "base": "bg-[#EBEBEB] p-[10px] banner-accordions",
             },
             "title": {
                 "arrow": {
@@ -41,6 +41,14 @@ export default function Modal() {
             }
         }
     }
+
+    useEffect(() => {
+        if (showModal) {
+            document.body.style.overflow = 'hidden';
+        } else document.body.style.overflow = 'scroll';
+        return () => {};
+    }, [showModal]);
+
     return (
         <>
             <button
@@ -58,11 +66,11 @@ export default function Modal() {
             {showModal ? (
                 <>
                     <div
-                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                        className="justify-center items-center flex overflow-x-hidden overflow-y-hidden fixed inset-0 z-50 outline-none focus:outline-none"
                     >
                         <div className="relative w-full my-6 mx-auto max-w-3xl">
                             {/*content*/}
-                            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                            <div className="h-[100vw] overflow-y-scroll border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                 {/*header*/}
                                 <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
                                     <button
@@ -92,7 +100,7 @@ export default function Modal() {
                                                             </Accordion.Title>
                                                             <Accordion.Content>
                                                                 {item.content.map((content) =>
-                                                                    (<img src={content} alt={""} className={"max-w-24"}/>)
+                                                                    (<img src={content} alt={""} className={"modal-images"}/>)
                                                                 )}
 
                                                             </Accordion.Content>

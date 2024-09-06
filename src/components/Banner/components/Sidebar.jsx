@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 const Sidebar = ({ images, isVisible }) => {
     const [animate, setAnimate] = useState(false);
+    const [oldImages, setOldImages] = useState()
 
     useEffect(() => {
         if (images.length > 0) {
+            setOldImages(images)
             setAnimate(true);
             setTimeout(() => {
                 setAnimate(false);

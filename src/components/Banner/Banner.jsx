@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
+import ReactImageMagnify from 'react-image-magnify';
 import originalTruck from '../../images/original-truck.png';
 import originalTruckTranslated from '../../images/original-truck-translated.png';
 import slicedTruck from '../../images/sliced-truck.png';
@@ -24,6 +25,10 @@ const Banner = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [opacity, setOpacity] = useState(0);
 
+    const handleMouseEnterTruck = (e) => {
+        setOpacity(0)
+    }
+
     const handleMouseMove = (e) => {
         if (!divRef.current || isFocused) return;
 
@@ -31,6 +36,7 @@ const Banner = () => {
         const rect = div.getBoundingClientRect();
 
         setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+        setOpacity(1)
     };
 
     const handleFocus = () => {
@@ -43,7 +49,7 @@ const Banner = () => {
         setOpacity(0);
     };
 
-    const isMobileResolution = useMatchMedia('(max-width: 720px)', true)
+    const isMobileResolution = useMatchMedia('(max-width: 768px)', true)
 
     useEffect(() => {
         setOriginalTruckSrc(language === "eng" ? originalTruck : originalTruckTranslated)
@@ -59,6 +65,7 @@ const Banner = () => {
             setOpacity(1);
             setShowSlicedTruck(true);
             setSidebarVisible(true);
+            handleMouseMove(e)
         }, 100);
     };
 
@@ -124,8 +131,8 @@ const Banner = () => {
                                      onMouseMove={handleMouseMove}
                                      onFocus={handleFocus}
                                      onBlur={handleBlur}
-                                     onMouseEnter={() => setOpacity(1)}
-                                     onMouseLeave={() => setOpacity(0)}>
+                                     onMouseEnter={handleMouseEnterTruck}
+                                     onMouseLeave={handleMouseLeave}>
                                     <div className="truck-area hover-area area-1"
                                          onMouseEnter={() => handleHoverArea('area1')}></div>
                                     <div className="truck-area hover-area area-2"
@@ -135,10 +142,11 @@ const Banner = () => {
                                     <div className="truck-area hover-area area-4"
                                          onMouseEnter={() => handleHoverArea('area4')}></div>
                                     <div
-                                        className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+                                        className="mouse-over pointer-events-none absolute opacity-0"
                                         style={{
                                             opacity,
-                                            background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,1), transparent 70%)`,
+                                            left: `${position.x}px`,
+                                            top: `${position.y}px`,
                                         }}
                                     />
                                 </div>
