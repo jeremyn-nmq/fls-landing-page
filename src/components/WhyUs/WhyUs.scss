@@ -1,11 +1,29 @@
 .why-us-section{
   .why-us-item{
+    width: 300px;
+    border-radius: 15px;
+    transition: all ease 0.3s;
+    .why-us-item-content{
+      min-height: 300px;
+    }
+
     img{
       aspect-ratio: 6/5;
       object-fit: cover;
       width: 100%;
-      min-width: 300px;
       border-radius: 15px 15px 0 0;
+      @media screen and (max-width: 786px){
+        width: 100%;
+      }
+    }
+
+    &:hover{
+      box-shadow: -4px 8px 20px 4px #0000001A;
+      cursor: pointer;
+      h4{
+        color: $primary;
+        font-weight: $font-weight-bold;
+      }
     }
   }
 }

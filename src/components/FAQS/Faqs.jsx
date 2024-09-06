@@ -44,8 +44,8 @@ const Faqs = () => {
             <div className={"faq-accordion flex flex-col gap-3 flex-wrap"}>
                 {FAQ.map((item, index) => {
                     return (
-                        <Flowbite theme={{ theme: customTheme }}>
-                            <Accordion collapseAll key={index}>
+                        <Flowbite theme={{ theme: customTheme }} key={index}>
+                            <Accordion collapseAll>
                                 <Accordion.Panel>
                                     <Accordion.Title>{t(item.question)}</Accordion.Title>
                                     <Accordion.Content>
