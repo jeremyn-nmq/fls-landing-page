@@ -25,7 +25,7 @@ const TransportRoutes = () => {
                 </div>
                 <div className={"flex flex-col gap-5"}>
                     <img src={flag3} alt={""}/>
-                    <p className={"text-center route-name"}>Campodia</p>
+                    <p className={"text-center route-name"}>Cambodia</p>
                 </div>
                 <div className={"flex flex-col gap-5"}>
                     <img src={flag4} alt={""}/>

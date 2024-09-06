@@ -50,8 +50,8 @@ export const CTA_ITEMS = [
 		name: "phone",
 		order: 1,
 		info: {
-			href: "tel: +842854496084",
-			label: '+84 28 54 496 084'
+			href: "tel: +84987003278",
+			label: '(+84) 987 003 278'
 		}
 	},
 	{
@@ -59,8 +59,8 @@ export const CTA_ITEMS = [
 		name: "zalo",
 		order: 2,
 		info: {
-			href: "https://zalo.me/0813822635",
-			label: '+84 28 54 496 084',
+			href: "https://zalo.me/0987003278",
+			label: '0987003278',
 			newPage: true,
 		}
 	}

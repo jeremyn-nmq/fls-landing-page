@@ -46,8 +46,8 @@ const Banner = () => {
     const isMobileResolution = useMatchMedia('(max-width: 720px)', true)
 
     useEffect(() => {
-        setOriginalTruckSrc(language === "en" ? originalTruck : originalTruckTranslated)
-        setSlicedTruckSrc(language === "en" ? slicedTruck : slicedTruckTranslated)
+        setOriginalTruckSrc(language === "eng" ? originalTruck : originalTruckTranslated)
+        setSlicedTruckSrc(language === "eng" ? slicedTruck : slicedTruckTranslated)
     }, [language])
 
     const handleAreaClick = (e) => {

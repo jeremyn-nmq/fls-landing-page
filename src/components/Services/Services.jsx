@@ -9,7 +9,7 @@ const Services = () => {
     const {t} = useTranslation();
     return (
         <div className={"service-section bg-[#0068B0] flex flex-col gap-12"} id={"services"}>
-            <div className={"flex align-top gap-[60px] flex-wrap"}>
+            <div className={"flex align-top gap-[60px] md:flex-row flex-col"}>
                 <h2 className={"heading-section"}>
                     {t("services_heading")}
                 </h2>

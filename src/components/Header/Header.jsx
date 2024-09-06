@@ -5,6 +5,7 @@ import FLSlink from '../../images/FLS-link.png';
 
 const Header = ({ siteTitle }) => {
     const { languages, originalPath, t, i18n } = useI18next();
+    console.log(languages)
     const [isOpened, setIsOpened] = useState(false);
     const navBarItems = [
         {
@@ -35,8 +36,8 @@ const Header = ({ siteTitle }) => {
                     </div>
                     <ul className={`navbar flex gap-5 transition items-center md:flex-row flex-col md:static absolute ${isOpened ? "opacity-100 block top-[130px] z-10 w-full left-0 bg-white": "opacity-0 hidden"}`}>
                         {navBarItems.map((item, index) => (
-                            <li key={index}>f
-                                <Link to={item.url} className={"text-black uppercase font-[Gotham] hover:cursor-pointer flex items-center"}>
+                            <li key={index}>
+                                <Link to={item.url} className={"text-black font-[Gotham] hover:cursor-pointer flex items-center"}>
                                     {t(item.translationKey)}
                                 </Link>
                             </li>
@@ -49,14 +50,14 @@ const Header = ({ siteTitle }) => {
                     <ul className="languages">
                         {languages.map((lng) => (
                             <li key={lng}>
-                                <Link to={originalPath} language={lng} className={`text-[#0068B0] border-[#0068B0] border-solid border-[1px] px-[18px] py-[12px] rounded-[8px] capitalize ${i18n.resolvedLanguage === lng ? "hidden" : "flex"}`}>
+                                <Link to={originalPath} language={lng} className={`uppercase text-[#0068B0] border-[#0068B0] border-solid border-[1px] px-[18px] py-[12px] rounded-[8px] ${i18n.resolvedLanguage === lng ? "hidden" : "flex"}`}>
                                     {lng}
                                 </Link>
                             </li>
                         ))}
                     </ul>
                     <a href={"https://fls-group.com/"}>
-                        <img src={FLSlink} alt={""} className={"h-full object-contain hover:cursor-pointer"}/>
+                        <img src={FLSlink} alt={""} className={"h-full object-contain hover:cursor-pointer max-w-[100px]"}/>
                     </a>
                 </div>
             </div>

@@ -36,7 +36,7 @@ const Footer = () => {
                             <a href={"#"} className={"self-center"}>
                                 <img src={facebookIcon} alt={""}/>
                             </a>
-                            <a href={"#"} className={"self-center"}>
+                            <a href={"https://zalo.me/0987003278"} className={"self-center"}>
                                 <img src={zaloIcon} alt={""}/>
                             </a>
                             <a href={"#"} className={"self-center"}>
@@ -47,19 +47,15 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
-                    <div className={"md:pl-4 flex flex-col justify-between"}>
-                        <p>
-                            Nguyen Van A <br/>
-                            +1 (555) 123-4567
-                        </p>
-                        <p>
-                            Nguyen Van A <br/>
-                            +1 (555) 123-4567
-                        </p>
-                        <p>
-                            Nguyen Van A <br/>
-                            +1 (555) 123-4567
-                        </p>
+                    <div className={"md:pl-4 flex flex-col justify-start whitespace-nowrap gap-[10px]"}>
+                        <a href={"https://zalo.me/0987003278"}>
+                            Vũ Công Thành <br/>
+                            +84 987003278
+                        </a>
+                        <a href={"https://zalo.me/0933028639"}>
+                            Linh Huỳnh <br/>
+                            +84 933028639
+                        </a>
                     </div>
                 </div>
             </div>
