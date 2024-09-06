@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import originalTruck from '../../images/original-truck.png';
 import originalTruckTranslated from '../../images/original-truck-translated.png';
 import slicedTruck from '../../images/sliced-truck.png';
@@ -19,6 +19,30 @@ const Banner = () => {
     const [slicedTruckSrc, setSlicedTruckSrc] = useState(originalTruck);
     const { language} = useI18next();
 
+    const divRef = useRef(null);
+    const [isFocused, setIsFocused] = useState(false);
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [opacity, setOpacity] = useState(0);
+
+    const handleMouseMove = (e) => {
+        if (!divRef.current || isFocused) return;
+
+        const div = divRef.current;
+        const rect = div.getBoundingClientRect();
+
+        setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+    };
+
+    const handleFocus = () => {
+        setIsFocused(true);
+        setOpacity(1);
+    };
+
+    const handleBlur = () => {
+        setIsFocused(false);
+        setOpacity(0);
+    };
+
     const isMobileResolution = useMatchMedia('(max-width: 720px)', true)
 
     useEffect(() => {
@@ -32,6 +56,7 @@ const Banner = () => {
         setTruckMoved(true);
         setActiveImages(MOCK_BANNER_IMGS[areaId]);
         setTimeout(() => {
+            setOpacity(1);
             setShowSlicedTruck(true);
             setSidebarVisible(true);
         }, 100);
@@ -39,11 +64,14 @@ const Banner = () => {
 
     const handleMouseLeave = (e) => {
         e.preventDefault();
+        setOpacity(0);
         setShowSlicedTruck(false);
         setSidebarVisible(false);
         setTimeout(() => {
             setTruckMoved(false);
         }, 100);
+
+        console.log('mouse leave')
     };
 
     const handleHoverArea = (areaId) => {
@@ -62,6 +90,7 @@ const Banner = () => {
                 ) : (
                     <>
                         <div className="main-banner-ground absolute"></div>
+                        <div className={`main-banner-overlay h-full w-full absolute ${showSlicedTruck ? 'visible' : 'invisible'}`}></div>
                         <div className={`truck-container relative ${truckMoved ? 'move-left' : 'move-right'}`}>
                             <div className={!showSlicedTruck ? "opacity-100 w-100" : "opacity-0 w-0"}>
                                 <img
@@ -92,7 +121,13 @@ const Banner = () => {
                                     alt="sliced-truck"
                                     id="slicedTruck"
                                 />
-                                <div className="truck-overlay" onMouseLeave={handleMouseLeave}>
+                                <div className="truck-overlay"
+                                     ref={divRef}
+                                     onMouseMove={handleMouseMove}
+                                     onFocus={handleFocus}
+                                     onBlur={handleBlur}
+                                     onMouseEnter={() => setOpacity(1)}
+                                     onMouseLeave={() => setOpacity(0)}>
                                     <div className="truck-area hover-area area-1"
                                          onMouseEnter={() => handleHoverArea('area1')}></div>
                                     <div className="truck-area hover-area area-2"
@@ -101,6 +136,13 @@ const Banner = () => {
                                          onMouseEnter={() => handleHoverArea('area3')}></div>
                                     <div className="truck-area hover-area area-4"
                                          onMouseEnter={() => handleHoverArea('area4')}></div>
+                                    <div
+                                        className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+                                        style={{
+                                            opacity,
+                                            background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,1), transparent 70%)`,
+                                        }}
+                                    />
                                 </div>
                             </div>
                         </div>

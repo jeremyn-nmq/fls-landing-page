@@ -9,7 +9,7 @@ import {useTranslation} from "gatsby-plugin-react-i18next";
 const Footer = () => {
     const {t} = useTranslation();
     return (
-    <footer className={"container mx-auto"}>
+    <footer className={"container mx-auto pt-[80px]"}>
         <div className={'flex columns-2 gap-16 py-8 md:flex-row flex-col border-[1px] border-[#E6E6E6] border-solid border-x-0'}>
             <div className={"google-map md:w-4/12 w-full"}>
                 <iframe

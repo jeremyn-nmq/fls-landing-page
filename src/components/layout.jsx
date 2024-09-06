@@ -12,7 +12,7 @@ import CTA from "./CTA/CTA";
 
 const Layout = () => {
     return (
-        <div className={"flex flex-col gap-[80px]"}>
+        <div className={"flex flex-col"}>
             <Header/>
             <main className={"flex flex-col gap-[80px] relative"}>
                 <Banner/>
