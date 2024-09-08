@@ -170,7 +170,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 20vw;
+    width: 25vw;
     height: 100vh;
     background-color: transparent;
     transform: translateX(100%);
@@ -204,6 +204,10 @@
     }
 
     .slide-in-right {
-        animation: slide-in-right 0.5s ease forwards;
+        animation: slide-in-right 0.7s ease forwards;
+    }
+
+    .slide-out-right {
+        animation: slide-out-right 0.5s ease forwards;
     }
 }
