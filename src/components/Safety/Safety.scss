@@ -3,7 +3,7 @@
   @media screen and (max-width: 786px) {
     gap: 50px;
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 425px) {
     gap: 30px;
   }
 }
@@ -42,7 +42,7 @@
       width: 100%;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
       grid-template-columns: repeat(1, 1fr);
     }
 
