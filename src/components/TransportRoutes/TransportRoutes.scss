@@ -2,3 +2,43 @@
   font-size: $subheading-size;
   color: $text-secondary;
 }
+
+.transport-routes-flags{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 56px;
+
+  img {
+    width: auto;
+    aspect-ratio: 1;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .transport-routes-flags{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    row-gap: 24px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .transport-routes-flags{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    row-gap: 16px;
+  }
+
+  .route-name{
+    font-size: 1rem;
+    color: $text-secondary;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .transport-routes-flags {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 36px;
+    row-gap: 24px;
+  }
+}

@@ -1,6 +1,7 @@
 .cta-wrapper{
     width: 85px !important;
-    //bg-white flex gap-2 px-4 py-2 rounded-l-[10px]
+    height: 0;
+    bottom: 30vh;
     >* {
         background-color: white;
         display: flex;

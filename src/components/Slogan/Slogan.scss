@@ -1,0 +1,11 @@
+.brand-slogan{
+  max-width: 100%;
+  background: url("../images/quotes.png") no-repeat center;
+  h2{
+    word-break: break-word;
+    @media screen and (max-width: 786px) {
+      padding: 0 20px;
+      font-size: 2rem;
+    }
+  }
+}

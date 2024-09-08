@@ -1,24 +1,60 @@
-.brand-slogan{
-  padding: 50px 0;
-  background: url("../images/quotes.png") no-repeat center;
-  h2{
-    @media screen and (max-width: 786px) {
-      padding: 0 20px;
-    }
+.safety-section-wrapper{
+  gap: 80px;
+  @media screen and (max-width: 786px) {
+    gap: 50px;
+  }
+  @media screen and (max-width: 425px) {
+    gap: 30px;
   }
 }
 
 .safety-section{
-  padding: 50px 20px;
-  border-radius: 100px 0 0 0;
   box-shadow: -4px 8px 20px 4px #0000001A;
   border: 1px solid #EBEBEB;
-  @media screen and (min-width: 786px) {
-    padding: 50px 100px;
-    border-radius: 40px 0 0 0;
-  }
-
+  gap: 50px;
   .heading-section{
     color: $primary !important;
+    line-height: 1.25;
   }
+
+  &--heading{
+    width: 25%;
+    @media screen and (max-width: 786px) {
+      width: 100%;
+    }
+  }
+
+  &--certificates{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    @media screen and (max-width: 1250px) {
+      gap: 30px;
+    }
+
+    @media screen and (max-width: 1160px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 786px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 425px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    a{
+      aspect-ratio: 1;
+      width: auto;
+      max-width: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
+  }
+
 }

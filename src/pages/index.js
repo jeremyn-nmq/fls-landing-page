@@ -4,20 +4,12 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Banner from "../components/Banner/Banner";
 
 const LandingPageIndex = ({ data, location }) => {
     const { t } = useTranslation();
-    // const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout location={location}>
-        {/*<Seo title={t('seo')} />*/}
-        {/*<h1>*/}
-        {/*    <Trans i18nKey="title">Hi people</Trans>*/}
-        {/*</h1>*/}
-        <Banner/>
-    </Layout>
+    <Layout location={location}></Layout>
   )
 }
 

@@ -1,11 +1,8 @@
 .faq-section{
-  border-radius: 0 100px 0 0;
   box-shadow: -4px 8px 20px 4px #0000001A;
   padding: 50px 20px;
   @media screen and (min-width: 786px) {
-    margin-right: $container-margin;
     padding: 50px 100px;
-    border-radius: 40px 0 0 0;
   }
 
   .faq-answers p{

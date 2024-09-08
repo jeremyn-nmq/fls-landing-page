@@ -105,3 +105,26 @@ export const BANNER_ITEMS = [
 		]
 	}
 ]
+
+export const TRANSPORT_ROUTES = [
+	{
+		id: 'vn',
+		flag: flag1,
+		alt: 'vietnam-flag'
+	},
+	{
+		id: 'cn',
+		flag: flag2,
+		alt: 'china-flag'
+	},
+	{
+		id: 'kh',
+		flag: flag3,
+		alt: 'cambodia-flag'
+	},
+	{
+		id: 'la',
+		flag: flag4,
+		alt: 'laos-flag'
+	}
+]

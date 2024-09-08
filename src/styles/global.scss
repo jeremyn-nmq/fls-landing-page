@@ -11,8 +11,10 @@
 @import "../components/FAQS/Faqs";
 @import "../components/TransportRoutes/TransportRoutes";
 @import "../components/Services/Services";
+@import "../components/Slogan/Slogan";
 @import "../components/Safety/Safety";
 @import "../components/WhyUs/WhyUs";
+@import "../components/Strip/Strip";
 @import "../components/CTA/CTA";
 
 h2.heading-section{
@@ -28,9 +30,82 @@ p, h2[data-testid="flowbite-accordion-heading"]{
   font-family: Gotham;
   font-size: $paragraph-size;
   font-weight: $font-weight-light;
+  @media only screen and (max-width: 768px){
+    font-size: 1rem;
+  }
 }
 
 html{
   scroll-behavior: smooth;
   white-space: pre-line;
+}
+
+.container-main{
+  margin: 50px 0;
+  @media only screen and (max-width: 375px){
+    margin: 30px 0;
+  }
+
+  &--even{
+    padding: 0 50px;
+    @media only screen and (max-width: 768px){
+      padding: 0 30px;
+    }
+    @media only screen and (max-width: 375px){
+      padding: 0 15px;
+    }
+  }
+
+  &--left{
+    padding-left: 80px;
+    padding-right: 0;
+    @media only screen and (max-width: 768px){
+      padding-left: 30px;
+    }
+    @media only screen and (max-width: 375px){
+      padding-left: 15px;
+    }
+  }
+
+  &--right{
+    padding-right: 80px;
+    padding-left: 0;
+    @media only screen and (max-width: 768px){
+      padding-right: 30px;
+    }
+    @media only screen and (max-width: 375px){
+      padding-right: 15px;
+    }
+  }
+}
+
+.one-side{
+  padding: 50px 100px;
+
+  &--from-left{
+    border-radius: 0 100px 0 0 !important;
+    @media screen and (max-width: 970px) {
+      border-radius: 0 40px 0 0 !important;
+    }
+  }
+
+  &--from-right{
+    border-radius: 100px 0 0 0 !important;
+    @media screen and (max-width: 970px) {
+      border-radius: 40px 0 0 0 !important;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    padding: 50px 70px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 50px 30px;
+  }
+
+  @media screen and (max-width: 970px) {
+    padding: 50px 20px;
+    border-radius: 0 40px 0 0;
+  }
 }
