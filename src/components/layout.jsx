@@ -16,7 +16,7 @@ import {TRANSPORT_ROUTES} from '../utils/data'
 
 const Layout = () => {
     return (
-        <div className={"flex flex-col overflow-hidden"}>
+        <div className={"flex flex-col"}>
             <Header/>
             <main className={"flex flex-col relative"}>
                 <Banner/>
@@ -27,9 +27,9 @@ const Layout = () => {
                 <WhyUs/>
                 <Strip/>
                 <Faqs/>
+                <CTA/>
             </main>
             <Footer/>
-            <CTA/>
         </div>
     )
 }
