@@ -40,16 +40,16 @@ const Footer = () => {
                             <a href={"mailto:office.vn@fls-group.com"}>{t("footer_description_email")}</a>
                         </p>
                         <div className={"flex gap-4 align-middle mt-4"}>
-                            <a href={"#"} className={"self-center"}>
+                            <a href={"https://www.facebook.com/FLSGroup1993"} target="_blank" className={"self-center"}>
                                 <img src={facebookIcon} alt={""}/>
                             </a>
                             <a href={"https://zalo.me/0987003278"} className={"self-center"}>
                                 <img src={zaloIcon} alt={""}/>
                             </a>
-                            <a href={"#"} className={"self-center"}>
+                            <a href={"https://www.youtube.com/@FLSGroup"} target="_blank" className={"self-center"}>
                                 <img src={youtubeIcon} alt={""}/>
                             </a>
-                            <a href={"#"} className={"self-center"}>
+                            <a href={"https://www.linkedin.com/company/flsgroup/"} target="_blank" className={"self-center"}>
                                 <img src={linkedinIcon} alt={""}/>
                             </a>
                         </div>

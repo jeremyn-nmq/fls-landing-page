@@ -4,6 +4,16 @@ import flag3 from "../images/flag3.png";
 import flag4 from "../images/flag4.png";
 import phoneIcon from "../images/cta-phone.png";
 import zaloIcon from "../images/cta-zalo.png";
+import assetOwnerShip0 from "../images/banner/asset-ownership-0.jpg";
+import assetOwnerShip1 from "../images/banner/asset-ownership-1.jpg";
+import flexibility0 from "../images/banner/flexibility-0.jpg";
+import flexibility1 from "../images/banner/flexibility-1.jpg";
+import flexibility2 from "../images/banner/flexibility-2.jpg";
+import oneStopShop0 from "../images/banner/one-stop-shop-0.jpg";
+import oneStopShop1 from "../images/banner/one-stop-shop-1.jpg";
+import transAsia0 from "../images/banner/trans-asia-0.jpg";
+import transAsia1 from "../images/banner/trans-asia-1.jpg";
+import transAsia2 from "../images/banner/trans-asia-2.jpg";
 
 export const FAQ = [
 	{
@@ -30,18 +40,14 @@ export const FAQ = [
 	{
 		"question": "faq_question7",
 		"answer": "faq_answer7"
-	},
-	{
-		"question": "faq_question8",
-		"answer": "faq_answer8"
 	}
 ]
 
-export const MOCK_BANNER_IMGS = {
-	area1: [flag1, flag1, flag1],
-	area2: [flag2, flag2, flag2],
-	area3: [flag3, flag3, flag3],
-	area4: [flag4, flag4, flag4],
+export const BANNER_IMGS = {
+	area1: [assetOwnerShip0, assetOwnerShip1],
+	area2: [oneStopShop0, oneStopShop1],
+	area3: [transAsia0, transAsia1, transAsia2],
+	area4: [flexibility0, flexibility1, flexibility2],
 };
 
 export const CTA_ITEMS = [
@@ -67,42 +73,26 @@ export const CTA_ITEMS = [
 ]
 
 
-export const BANNER_ITEMS = [
+export const MOBILE_BANNER_ITEMS = [
 	{
 		"heading": "banner_heading1",
 		"subHeading":"banner_subheading1",
-		"content": [
-			flag1,
-			flag2,
-			flag3
-		]
+		"content": BANNER_IMGS.area1
 	},
 	{
 		"heading": "banner_heading2",
 		"subHeading":"banner_subheading2",
-		"content": [
-			flag1,
-			flag2,
-			flag3
-		]
+		"content": BANNER_IMGS.area2
 	},
 	{
 		"heading": "banner_heading3",
 		"subHeading":"banner_subheading3",
-		"content": [
-			flag1,
-			flag2,
-			flag3
-		]
+		"content": BANNER_IMGS.area3
 	},
 	{
 		"heading": "banner_heading4",
 		"subHeading":"banner_subheading4",
-		"content": [
-			flag1,
-			flag2,
-			flag3
-		]
+		"content": BANNER_IMGS.area4
 	}
 ]
 

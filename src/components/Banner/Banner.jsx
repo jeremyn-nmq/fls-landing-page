@@ -8,12 +8,12 @@ import Sidebar from "./components/Sidebar";
 import {useI18next} from "gatsby-plugin-react-i18next";
 import useMatchMedia from "../../utils/hooks/useMatchMedia";
 import Modal from "./components/Modal";
-import {MOCK_BANNER_IMGS} from "../../utils/data";
+import {BANNER_IMGS} from "../../utils/data";
 
 const Banner = () => {
     const [showSlicedTruck, setShowSlicedTruck] = useState(false);
     const [truckMoved, setTruckMoved] = useState(false);
-    const [activeImages, setActiveImages] = useState(MOCK_BANNER_IMGS.area1);
+    const [activeImages, setActiveImages] = useState(BANNER_IMGS.area1);
     const [sidebarVisible, setSidebarVisible] = useState(false);
     const [originalTruckSrc, setOriginalTruckSrc] = useState(originalTruck);
     const [slicedTruckSrc, setSlicedTruckSrc] = useState(originalTruck);
@@ -59,7 +59,7 @@ const Banner = () => {
         e.preventDefault();
         const areaId = e.currentTarget.id;
         setTruckMoved(true);
-        setActiveImages(MOCK_BANNER_IMGS[areaId]);
+        setActiveImages(BANNER_IMGS[areaId]);
         setTimeout(() => {
             setOpacity(1);
             setShowSlicedTruck(true);
@@ -81,7 +81,7 @@ const Banner = () => {
     };
 
     const handleHoverArea = (areaId) => {
-        setActiveImages(MOCK_BANNER_IMGS[areaId]);
+        setActiveImages(BANNER_IMGS[areaId]);
     };
 
     return (
