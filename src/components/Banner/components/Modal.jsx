@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import originalTruck from '../../../images/original-truck.png';
-import {BANNER_ITEMS} from '../../../utils/data'
+import {MOBILE_BANNER_ITEMS} from '../../../utils/data'
 import {Accordion, Flowbite} from "flowbite-react";
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 
@@ -85,7 +85,7 @@ export default function Modal() {
                                 {/*body*/}
                                 <div className="relative p-6 flex-auto max-h-[80vh] overflow-auto">
                                     <div className={"flex flex-col gap-3 flex-wrap"}>
-                                        {BANNER_ITEMS.map((item, index) => {
+                                        {MOBILE_BANNER_ITEMS.map((item, index) => {
                                             return (
                                                 <Flowbite theme={{ theme: customTheme }} key={index}>
                                                     <Accordion collapseAll>
@@ -102,7 +102,6 @@ export default function Modal() {
                                                                 {item.content.map((content) =>
                                                                     (<img src={content} alt={""} className={"modal-images"}/>)
                                                                 )}
-
                                                             </Accordion.Content>
                                                         </Accordion.Panel>
                                                     </Accordion>
