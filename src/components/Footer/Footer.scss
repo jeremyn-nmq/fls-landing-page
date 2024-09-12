@@ -19,12 +19,18 @@ footer{
     font-size: 1rem;
 
     &.opacity{
-      opacity: 30%;
+      color: rgba(0,0,0,0.3);
 
       .hide-on-desktop{
         display: none;
         @media screen and (max-width: 1024px) {
           display: flex;
+          flex-direction: column;
+        }
+
+        a{
+          display: flex;
+          gap: 10px;
           flex-direction: column;
         }
       }
@@ -79,6 +85,11 @@ footer{
       @media screen and (max-width: 1024px) {
         display: none;
       }
+      a{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
     }
   }
 
@@ -89,5 +100,10 @@ footer{
     @media screen and (max-width: 900px) {
       flex-direction: column-reverse;
     }
+  }
+
+  .zalo-qr{
+    width: 10vh;
+    height: 10vh;
   }
 }

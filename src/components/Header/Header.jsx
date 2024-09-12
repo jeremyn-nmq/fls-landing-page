@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => {
                 </div>
 
                 <div className={"flex items-center gap-5"}>
-                    <button className={"bg-[#0068B0] px-[18px] py-[12px] rounded-[8px] shadow-[0px 1px 2px 0px #0000000D] text-[16px]"}>Enquiry</button>
+                    <a href={"#footer"} className={"bg-[#0068B0] px-[18px] py-[12px] rounded-[8px] shadow-[0px 1px 2px 0px #0000000D] text-[16px]"}>Enquiry</a>
                     <ul className="languages">
                         {languages.map((lng) => (
                             <li key={lng}>

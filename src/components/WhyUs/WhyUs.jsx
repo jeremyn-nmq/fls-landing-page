@@ -1,7 +1,7 @@
 import * as React from "react"
 import whyUs1 from "../../images/us1.png";
 import whyUs2 from "../../images/us2.png";
-import whyUs3 from "../../images/us3.png";
+import whyUs3 from "../../images/us3.jpg";
 import whyUs4 from "../../images/us4.png";
 
 import { useTranslation } from 'gatsby-plugin-react-i18next';

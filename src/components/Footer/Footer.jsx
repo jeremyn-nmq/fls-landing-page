@@ -1,6 +1,8 @@
 import * as React from "react";
 import facebookIcon from '../../images/facebook-icon.png';
 import zaloIcon from '../../images/zalo-icon.png';
+import zaloVCT from '../../images/zalo-vct.png';
+import zaloLH from '../../images/zalo-lh.png';
 import youtubeIcon from '../../images/youtube-icon.png';
 import linkedinIcon from '../../images/linkedin-icon.png';
 import {useTranslation} from "gatsby-plugin-react-i18next";
@@ -9,7 +11,7 @@ import {useTranslation} from "gatsby-plugin-react-i18next";
 const Footer = () => {
     const {t} = useTranslation();
     return (
-    <footer className={"container-main container-main--even"}>
+    <footer id={"footer"} className={"container-main container-main--even"}>
         <div className={'footer-layout flex border-[1px] border-[#E6E6E6] border-solid border-x-0'}>
             <div className={"google-map "}>
                 <iframe
@@ -34,8 +36,23 @@ const Footer = () => {
                             {t("footer_description_address")} <br/>
                             <a href={"tel:+842854496084"}>{t("footer_description_telephone")}</a> <br/>
                             <span className="hide-on-desktop">
-                                Zalo: <a href={"https://zalo.me/0987003278"}>+84 987003278 (Vũ Công Thành)</a>
-                                <a href={"https://zalo.me/0933028639"}>+84 933028639 (Linh Huỳnh)</a> <br/>
+                                Zalo:
+                                <a href={"https://zalo.me/0987003278"}>
+                                    <span><span className="underline">+84 987003278</span> (Vũ Công Thành)</span>
+                                    <img
+                                        className="zalo-qr z-10 object-contain"
+                                        src={zaloVCT}
+                                        alt="zalo-vct"
+                                    />
+                                </a>
+                                <a href={"https://zalo.me/0933028639"}>
+                                    <span><span className="underline">+84 933028639</span> (Linh Huỳnh)</span>
+                                    <img
+                                        className="zalo-qr z-10 object-contain"
+                                        src={zaloVCT}
+                                        alt="zalo-vct"
+                                    />
+                                </a> <br/>
                             </span>
                             <a href={"mailto:office.vn@fls-group.com"}>{t("footer_description_email")}</a>
                         </p>
@@ -56,12 +73,20 @@ const Footer = () => {
                     </div>
                     <div className={"footer-description--contact w-1/2 flex flex-col justify-start"}>
                         <a href={"https://zalo.me/0987003278"}>
-                            Vũ Công Thành <br/>
-                            <span className="underline">+84 987003278</span>
+                            <span> Vũ Công Thành <br/> <span className="underline">+84 987003278</span> </span>
+                            <img
+                                className="zalo-qr z-10 object-contain"
+                                src={zaloVCT}
+                                alt="zalo-vct"
+                            />
                         </a>
                         <a href={"https://zalo.me/0933028639"}>
-                            Linh Huỳnh <br/>
-                            <span className="underline">+84 933028639</span>
+                            <span> Linh Huỳnh <br/> <span className="underline">+84 933028639</span> </span>
+                            <img
+                                className="zalo-qr z-10 object-contain"
+                                src={zaloLH}
+                                alt="zalo-lh"
+                            />
                         </a>
                     </div>
                 </div>
