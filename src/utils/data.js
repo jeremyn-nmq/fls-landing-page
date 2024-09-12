@@ -2,6 +2,7 @@ import flag1 from "../images/flag1.png";
 import flag2 from "../images/flag2.png";
 import flag3 from "../images/flag3.png";
 import flag4 from "../images/flag4.png";
+import flag5 from "../images/flag5.jpeg";
 import phoneIcon from "../images/cta-phone.png";
 import zaloIcon from "../images/cta-zalo.png";
 import assetOwnerShip0 from "../images/banner/asset-ownership-0.jpg";
@@ -101,6 +102,11 @@ export const TRANSPORT_ROUTES = [
 		id: 'vn',
 		flag: flag1,
 		alt: 'vietnam-flag'
+	},
+	{
+		id: 'th',
+		flag: flag5,
+		alt: 'thailand-flag'
 	},
 	{
 		id: 'cn',

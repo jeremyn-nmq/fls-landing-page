@@ -5,11 +5,12 @@
 
 .transport-routes-flags{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 56px;
 
   img {
-    width: auto;
+    width: 250px;
+    border-radius: 10px;
     aspect-ratio: 1;
   }
 }
