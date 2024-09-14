@@ -51,8 +51,9 @@ export default function Modal() {
 
     return (
         <>
+            <div className="main-banner-ground mobile absolute"></div>
             <button
-                className="bg-transparent w-full px-4"
+                className="bg-transparent w-full px-4 z-10"
                 type="button"
                 onClick={() => setShowModal(true)}
             >
@@ -70,14 +71,17 @@ export default function Modal() {
                     >
                         <div className="relative w-full my-6 mx-auto max-w-3xl">
                             {/*content*/}
-                            <div className="h-[100vw] overflow-y-scroll border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                            <div
+                                className="h-[100vw] overflow-y-scroll border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                 {/*header*/}
-                                <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                                <div
+                                    className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
                                     <button
                                         className="p-1 ml-auto bg-transparent border-0 text-black opacity-1 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                                         onClick={() => setShowModal(false)}
                                     >
-                                        <span className="bg-transparent text-[#0067B0] opacity-1 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                                        <span
+                                            className="bg-transparent text-[#0067B0] opacity-1 h-6 w-6 text-2xl block outline-none focus:outline-none">
                                           ×
                                         </span>
                                     </button>
@@ -86,27 +90,29 @@ export default function Modal() {
                                 <div className="relative p-6 flex-auto max-h-[80vh] overflow-auto">
                                     <div className={"flex flex-col gap-3 flex-wrap"}>
                                         {MOBILE_BANNER_ITEMS.map((item, index) => {
-                                            return (
-                                                <Flowbite theme={{ theme: customTheme }} key={index}>
-                                                    <Accordion collapseAll>
-                                                        <Accordion.Panel>
-                                                            <Accordion.Title>
-                                                                <h2 className={"font-bold"}>
-                                                                    {t(item.heading)}
-                                                                </h2>
-                                                                <p className={"text-sm"}>
-                                                                    {t(item.subHeading)}
-                                                                </p>
-                                                            </Accordion.Title>
-                                                            <Accordion.Content>
-                                                                {item.content.map((content) =>
-                                                                    (<img src={content} alt={""} className={"modal-images"}/>)
-                                                                )}
-                                                            </Accordion.Content>
-                                                        </Accordion.Panel>
-                                                    </Accordion>
-                                                </Flowbite>
-                                            )}
+                                                return (
+                                                    <Flowbite theme={{theme: customTheme}} key={index}>
+                                                        <Accordion collapseAll>
+                                                            <Accordion.Panel>
+                                                                <Accordion.Title>
+                                                                    <h2 className={"font-bold"}>
+                                                                        {t(item.heading)}
+                                                                    </h2>
+                                                                    <p className={"text-sm"}>
+                                                                        {t(item.subHeading)}
+                                                                    </p>
+                                                                </Accordion.Title>
+                                                                <Accordion.Content>
+                                                                    {item.content.map((content) =>
+                                                                        (<img src={content} alt={""}
+                                                                              className={"modal-images"}/>)
+                                                                    )}
+                                                                </Accordion.Content>
+                                                            </Accordion.Panel>
+                                                        </Accordion>
+                                                    </Flowbite>
+                                                )
+                                            }
                                         )}
                                     </div>
                                 </div>
