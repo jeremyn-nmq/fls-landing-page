@@ -1,6 +1,7 @@
 {
   "seo": "Trang chủ",
   "title": "Chào bạn",
+  "header_enquiry": "Yêu cầu báo giá",
   "header_routes": "TUYẾN ĐƯỜNG",
   "header_services": "DỊCH VỤ",
   "header_whyus": "WHY US",
@@ -27,7 +28,7 @@
   "whyus_heading4": "LINH HOẠT NHẠY BÉN",
   "whyus_description1": "Xe tải và cont lạnh thuộc sở hữu và vận hành bởi FLS Group.\nĐảm bảo xe luôn mới dưới 7 năm tuổi, hiện đại và được bảo dưỡng định kỳ; trang bị hệ thống GPS độc quyền.",
   "whyus_description2": "Nhân viên nội bộ hỗ trợ dịch vụ trọn gói; túc trực tư vấn suốt quá trình sử dụng dịch vụ từ thủ tục giấy tờ đến vận chuyển hàng hóa.",
-  "whyus_description3": "Vận Tải Cont Lạnh khắp Việt Nam đến các nước Trung Quốc, Lào, Campuchia hiệu quả, nhanh chóng nhờ vị trí đường bờ biển Việt Nam đắc địa - trải dài từ Bắc đến Nam.",
+  "whyus_description3": "Vận Tải Cont Lạnh khắp Việt Nam đến các nước Thái Lan, Trung Quốc, Lào, Campuchia hiệu quả, nhanh chóng nhờ vị trí đường bờ biển Việt Nam đắc địa - trải dài từ Bắc đến Nam.",
   "whyus_description4": "Một trong những thế mạnh của FLS chính ở việc giải quyết kịp thời sự cố phát sinh, đảm bảo quá trình vận tải cont lạnh không gián đoạn, luôn được giao đúng hẹn, chính xác và tươi mới.",
   "statement_heading": "Xuyên suốt hành trình, Chăm sóc tận tình",
   "faq_question1": "1. Kiện hàng của tôi luôn được duy trì ở nhiệt độ ổn định trong suốt quá trình vận chuyển bằng cách nào?",
@@ -61,5 +62,6 @@
   "banner_heading3": "TUYẾN NỘI ĐỊA & XUYÊN Á",
   "banner_subheading3": "Giao nhận hàng lạnh xuyên các tỉnh nội địa Việt Nam và láng giềng: Trung Quốc, Campuchia, Lào",
   "banner_heading4": "LINH HOẠT NHẠY BÉN",
-  "banner_subheading4": "Giải quyết nhanh sự cố phát sinh đảm bảo hàng lạnh được giao đúng hẹn"
+  "banner_subheading4": "Giải quyết nhanh sự cố phát sinh đảm bảo hàng lạnh được giao đúng hẹn",
+  "script_heading": "Liên hệ ngay để nhận báo giá!"
 }

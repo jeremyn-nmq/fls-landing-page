@@ -6,7 +6,7 @@ const TransportRoutes = ({transportRoutes}) => {
 
     return (
         <div className={"container-main container-main--even flex flex-col items-center justify-center gap-5"} id={"routes"}>
-            <h2 className={"heading-section text-center"}>ROUTES</h2>
+            <h2 className={"heading-section text-center"}>{t("routes_heading")}</h2>
             <p className={"text-center opacity-60"}>
                 {t("routes_description")}
             </p>

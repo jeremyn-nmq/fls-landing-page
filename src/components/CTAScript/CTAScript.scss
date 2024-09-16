@@ -1,0 +1,12 @@
+.cta-script{
+  max-width: 100%;
+  background: url("../images/cta-script.jpg") no-repeat center;
+  h2{
+    word-break: break-word;
+    line-height: 128px;
+    @media screen and (max-width: 786px) {
+      padding: 0 20px;
+      font-size: 2rem;
+    }
+  }
+}

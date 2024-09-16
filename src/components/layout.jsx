@@ -13,6 +13,7 @@ import Banner from "./Banner/Banner";
 import CTA from "./CTA/CTA";
 
 import {TRANSPORT_ROUTES} from '../utils/data'
+import CTAScript from "./CTAScript/CTAScript";
 
 const Layout = () => {
     return (
@@ -27,6 +28,7 @@ const Layout = () => {
                 <WhyUs/>
                 <Strip/>
                 <Faqs/>
+                <CTAScript/>
                 <CTA/>
             </main>
             <Footer/>

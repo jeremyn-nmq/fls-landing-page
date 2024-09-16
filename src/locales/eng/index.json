@@ -1,6 +1,7 @@
 {
   "seo": "Home",
   "title": "Hi people",
+  "header_enquiry": "Enquiry",
   "header_routes": "ROUTES",
   "header_services": "SERVICES",
   "header_whyus": "WHY US",
@@ -27,7 +28,7 @@
   "whyus_heading4": "FLEXIBLE PROBLEM-SOLVER",
   "whyus_description1": "Our modern fleet, exclusively owned by FLS, boasts GPS-equipped trucks under 7 years old for reliable, efficient deliveries.",
   "whyus_description2": "Our dedicated team handles every aspect from paperwork to final delivery, providing comprehensive, personalized solutions.",
-  "whyus_description3": "Leveraging Vietnam's strategic coastline, we seamlessly connect deliveries to neighboring countries — Laos, Cambodia, and China — spanning international and domestic routes.",
+  "whyus_description3": "Leveraging Vietnam's strategic coastline, we seamlessly connect deliveries to neighboring countries — Thailand, Laos, Cambodia, and China — spanning international and domestic routes.",
   "whyus_description4": "We adapt quickly to solve challenges, ensuring on-time delivery with precision and reliability.",
   "statement_heading": "From Here to There, with Utmost Care",
   "faq_question1": "1. How can I be sure the temperature stays consistent during transport?",
@@ -61,5 +62,6 @@
   "banner_heading3": "TRANS-ASIA",
   "banner_subheading3": "We connect deliveries across Vietnam to neighboring countries",
   "banner_heading4": "FLEXIBLE PROBLEM-SOLVER",
-  "banner_subheading4": "We quickly solve any problems that come up"
+  "banner_subheading4": "We quickly solve any problems that come up",
+  "script_heading": "Still missing more information? Talk to our consultant now!"
 }
