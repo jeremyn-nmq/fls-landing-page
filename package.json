@@ -30,6 +30,8 @@
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "i18next": "^23.13.0",
+    "jquery": "^3.7.1",
+    "node-mailjet": "^6.0.6",
     "node-sass": "^9.0.0",
     "prismjs": "^1.29.0",
     "react": "^18.1.0",
