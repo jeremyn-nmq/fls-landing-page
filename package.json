@@ -29,6 +29,7 @@
     "gatsby-source-wordpress-experimental": "^7.0.6",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
+    "http-proxy-middleware": "^3.0.3",
     "i18next": "^23.13.0",
     "jquery": "^3.7.1",
     "node-mailjet": "^6.0.6",
