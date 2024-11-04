@@ -77,9 +77,9 @@ const CTAScript = () => {
             body: JSON.stringify({
                 Messages: [
                     {
-                        From: { Email: "quinn@yopmail.com", Name: "Me" },
-                        To: [{ Email: "quinn2@yopmail.com", Name: "You" }],
-                        Subject: "New Consultation Request",
+                        From: { Email: process.env.GATSBY_MJ_SENDER_EMAIL, Name: "Digital Ads - FLS Cont Lạnh" },
+                        To: [{ Email: process.env.GATSBY_MJ_RECEIVER_EMAIL, Name: "Admin" }],
+                        Subject: "[Digital Ads - FLS Cont Lạnh] Khách hàng mới",
                         HTMLPart: `
                             <h3>New Consultation Request</h3>
                             <p><strong>Name:</strong> ${formData.contactName}</p>
